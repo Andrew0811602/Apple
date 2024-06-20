@@ -1,0 +1,97 @@
+/* Sample styling for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Animation for grid items */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-container > div {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main main right"
+    "menu footer footer footer footer footer";
+  gap: 10px;
+  padding: 10px;
+  height: 100vh;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-container > div:hover {
+  transform: scale(1.05);
+}
+
+/* Background colors for each grid item */
+.item1 {
+  grid-area: header;
+  background-color: #8bb7e9; /* Blue */
+  height: 100vh;
+  background-image: url("Apple-20240502T021409Z-001/Apple/img/macbook_pro_3-wallpaper-3840x2160.jpg");
+}
+
+.item2 {
+  grid-area: menu;
+  background-color: #a987ff; /* Purple */
+}
+
+.item3 {
+  grid-area: main;
+  background-color: #f18787; /* Red */
+}
+
+.item4 {
+  grid-area: right;
+  background-color: #f7cac9; /* Pink */
+}
+
+.item5 {
+  grid-area: footer;
+  background-color: #92a8d1; /* Blue */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}

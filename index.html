@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Mockup</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="img/下載.jpg" />
+    <style>
+      /* Styling for the custom horizontal navigation bar */
+      .custom-navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px;
+      }
+      .custom-navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      .custom-navbar li {
+        margin: 0 10px;
+      }
+      .custom-navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .custom-navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Animation for grid items */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .grid-container > div {
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header header header header header"
+          "menu main main main main right"
+          "menu footer footer footer footer footer";
+        gap: 10px;
+        padding: 10px;
+        height: 100vh;
+      }
+
+      .grid-container > div {
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .grid-container > div:hover {
+        transform: scale(1.05);
+      }
+
+      /* Background colors for each grid item */
+      .item1 {
+        grid-area: header;
+        background-color: #8bb7e9;
+        height: 100vh;
+        background-image: url("Apple-20240502T021409Z-001/Apple/img/macbook_pro_3-wallpaper-3840x2160.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .item2 {
+        grid-area: menu;
+        background-color: #a987ff;
+      }
+
+      .item3 {
+        grid-area: main;
+        background-color: #f18787;
+      }
+
+      .item4 {
+        grid-area: right;
+        background-color: #f7cac9;
+      }
+
+      .item5 {
+        grid-area: footer;
+        background-color: #92a8d1;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div class="grid-container">
+      <div class="item1">
+        <a href="https://www.apple.com/tw/mac/" target="_blank">Mac</a>
+      </div>
+      <div class="item2">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xqyUdNxWazA?si=Gi-ujXbLZWVamV4I"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="item3">
+        <a href="https://www.apple.com/tw/ipad/" target="_blank">iPad</a>
+      </div>
+      <div class="item4">
+        <a href="https://www.apple.com/tw/airpods/" target="_blank">AirPods</a>
+      </div>
+      <div class="item5">
+        <a href="https://www.apple.com/tw/" target="_blank">Apple TW</a>
+      </div>
+    </div>
+  </body>
+</html>
